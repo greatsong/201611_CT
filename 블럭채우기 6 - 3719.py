@@ -1,7 +1,7 @@
 import sys
 sys.setrecursionlimit(100000)
 
-memo = [0]*100001
+memo = [0]*10000
 
 def f(n):
     if memo[n]:
