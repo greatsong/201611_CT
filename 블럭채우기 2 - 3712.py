@@ -1,13 +1,15 @@
 import sys
 sys.setrecursionlimit(100000)
 
-memo = {3: 2}
+memo = [0]*100000
 
 def f(n):
-    if n <= 2 :
-        return 0
-    if n in memo :
+    if memo[n]:
         return memo[n]
+    elif n <= 2 :
+        return 0
+    elif n == 3 :
+        return 2
     else :
         result = (2 * f(n-3)) % 100000007
         memo[n] = result

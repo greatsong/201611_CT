@@ -1,9 +1,8 @@
 n = int(input())
-li = []
+li = [0]*n
 
 for i in range(n) :
-    a = int(input())
-    li.append(a)
+    li[i] = int(input())
 
 min = max = li[0]
 mini, maxi = 0, 0
