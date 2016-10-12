@@ -1,13 +1,12 @@
 n = int(input())
 li = [0]*n
 
-for i in range(n) :
-    li[i] = int(input())
+li[:n] = map(int, input().split())
 
-min = max = li[0]
-mini, maxi = 0, 0
+min = max = li[0] # 가장 작은 문제를 해결
+mini, maxi = 1, 1
 
-for i in range(n) :
+for i in range(n) : # 작은 문제의 해결 결과 -> 큰 문제로 확장
     if li[i] > max :
         max = li[i]
         maxi = i+1
@@ -15,5 +14,5 @@ for i in range(n) :
         min = li[i]
         mini = i+1
 
-print(mini,':',min)
 print(maxi,':',max)
+print(mini,':',min)

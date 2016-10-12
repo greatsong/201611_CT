@@ -13,10 +13,10 @@ def f(n):
     elif n == 3 :
         return 22
     else:
-        result = (f(n - 1) * 3 + f(n - 2) - f(n - 3))
+        result = (f(n - 1) * 3 + f(n - 2) - f(n - 3))% 100007
         memo[n] = result
         return result
 
 i = int(input())
 
-print(f(i)% 100007)
+print(f(i))
